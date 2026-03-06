@@ -65,8 +65,8 @@ def test_specific_behavior():
 
 **단계 2: 테스트가 실패하는지 확인**
 
-실행: `pytest tests/path/test.py::test_name -v`
-예상: "function not defined"와 함께 실패(FAIL)
+명령어 제안: `pytest tests/path/test.py::test_name -v` (사용자 실행 요망)
+사용자 실행 후 예상 결과: "function not defined"와 함께 실패(FAIL)
 
 **단계 3: 최소한의 구현 작성**
 
@@ -77,8 +77,8 @@ def function(input):
 
 **단계 4: 테스트가 통과하는지 확인**
 
-실행: `pytest tests/path/test.py::test_name -v`
-예상: 통과(PASS)
+명령어 제안: `pytest tests/path/test.py::test_name -v` (사용자 실행 요망)
+사용자 실행 후 예상 결과: 통과(PASS)
 
 **단계 5: 커밋**
 
@@ -98,21 +98,16 @@ git commit -m "feat: add specific feature"
 
 ## 실행 이관 (Execution Handoff)
 
-계획을 저장한 후, 실행 옵션을 제안하세요:
+계획을 저장한 후, 사용자에게 실행 방향을 제안하세요:
 
-**"계획이 완료되어 `docs/plans/<filename>.md`에 저장되었습니다. 두 가지 실행 옵션이 있습니다:**
+**"계획이 완료되어 `docs/plans/<filename>.md`에 저장되었습니다. 이제 사용자님께서 이 계획을 어떻게 진행할지 선택해 주시면 됩니다:**
 
-**1. 서브에이전트 주도 (현재 세션)** - 작업당 새로운 서브에이전트 파견, 작업 간 검토, 빠른 반복
+**1. 단계적 상호작용 (현재 세션 유지)** - 작업 단위(Bite-Sized)별로 명령어를 제안받고, 직접 실행한 후 에러나 결과를 건네주어 피드백 루프를 도는 방식 (권장)
 
-**2. 병렬 세션 (별도)** - executing-plans로 새 세션 열기, 체크포인트가 있는 일괄 실행
+**2. 완료 후 일괄 리뷰** - 사용자가 별도로 계획에 따라 전부 구현한 뒤, 완성된 코드를 리뷰받는 방식
 
 **어느 방식을 선택하시겠습니까?"**
 
-**서브에이전트 주도 선택 시:**
-- **필수 서브 스킬:** superpowers:subagent-driven-development 사용
-- 현재 세션 유지
-- 작업당 새로운 서브에이전트 + 코드 리뷰
-
-**병렬 세션 선택 시:**
-- 워크트리에서 새 세션을 열도록 안내
-- **필수 서브 스킬:** 새 세션은 superpowers:executing-plans 사용
+**단계적 상호작용 선택 시:**
+- 작업당 명령어/코드를 제안하고 사용자의 실행 결과를 분석하여 다음 단계 안내
+- 에이전트는 절대 직접 명령을 치지 않음

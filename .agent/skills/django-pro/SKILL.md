@@ -23,7 +23,7 @@ description: Django 3.x 모범 사례, 확장 가능한 아키텍처 및 최신 
 
 - 목표, 제약 조건 및 필요한 입력을 명확히 하세요.
 - 관련 모범 사례를 적용하고 결과를 검증하세요.
-- 실행 가능한 단계와 검증 방법을 제공하세요.
+- 사용자에게 제안할 안전한 실행 명령어와 검증 방법을 명확히 제공하세요.
 - **컨텍스트 인식**: 프로젝트별 규칙은 항상 `ANTIGRAVITY.md`를 확인하세요.
 
 ## 역량
@@ -69,6 +69,11 @@ description: Django 3.x 모범 사례, 확장 가능한 아키텍처 및 최신 
 - OAuth2/OIDC 통합
 - 권한 클래스 및 객체 수준 권한(Object-level permissions)
 - CORS, CSRF 및 XSS 보호
+
+### 프레임워크 마이그레이션 대비 (Modernization Prep)
+
+- 향후 버전(Django 4.x/5.x) 업그레이드에 대비한 Deprecated API 식별 및 교체 가이드 명시
+- 파이썬 최신 기능(비동기 제너레이터 등)을 안전하게 수용하기 위한 `legacy-modernizer` 연계 적용 전략
 
 ### 성능 최적화
 

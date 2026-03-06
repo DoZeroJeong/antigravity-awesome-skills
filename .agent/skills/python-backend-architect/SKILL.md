@@ -47,6 +47,7 @@ description: 견고하고 확장 가능한 파이썬 백엔드 시스템 설계 
 - **Pandas/NumPy Integration**: ORM 만으로 해결하기 힘든 복잡한 데이터 집계 및 변환.
 - **ETL Pipelines**: 안정적인 데이터 추출, 변환, 적재 파이프라인 구축.
 - **Performance**: 대용량 데이터 처리 시 메모리 프로파일링 및 최적화.
+- **Dependency Management**: `uv`를 활용한 초고속 패키지 관리 및 의존성 해결(Resolution).
 
 ### 4. 클라우드 인프라 (Cloud Infrastructure)
 
