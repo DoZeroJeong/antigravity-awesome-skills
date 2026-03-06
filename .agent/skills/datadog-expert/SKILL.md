@@ -36,7 +36,7 @@ pip install ddtrace datadog
 
 - `DD_API_KEY`: Datadog API Key (에이전트 실행 시 필요)
 - `DD_ENV`: 환경 이름 (예: `production`, `staging`, `local`)
-- `DD_SERVICE`: 서비스 이름 (예: `danbi-server`, `payment-service`)
+- `DD_SERVICE`: 서비스 이름 (예: `my-backend`, `payment-service`)
 - `DD_VERSION`: 애플리케이션 버전 (빌드/배포 버전)
 - `DD_AGENT_HOST`: Datadog 에이전트 호스트 (기본값 `localhost`. Docker 환경에서는 보통 `datadog-agent` 컨테이너 이름 사용)
 - `DD_LOGS_INJECTION`: `true`로 설정하여 로그에 Trace ID 자동 주입
